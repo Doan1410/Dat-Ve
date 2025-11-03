@@ -1,0 +1,53 @@
+/* app.css */
+.content {
+  padding-top: 70px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.movie-content {
+  flex: 3;
+  min-width: 300px;
+}
+
+.news-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Grid phim: responsive */
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 100%;
+}
+
+/* Tablet: 2 cột */
+@media (max-width: 992px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .movies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 cột */
+@media (max-width: 600px) {
+  .movies {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-grid {
+    max-width: 280px;
+    height: auto;
+    min-height: 420px;
+  }
+
+  .movie-image {
+    height: 320px;
+  }
+}

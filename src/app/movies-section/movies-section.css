@@ -1,0 +1,48 @@
+/* movie.css */
+.app-movies-section {
+  /* Bỏ display: flex - vì cha là grid */
+  padding: 0; /* Không cần padding ở đây */
+}
+
+.movie-grid {
+  width: 100%; /* Quan trọng: chiếm hết ô grid */
+  max-width: 230px;
+  height: 400px;
+  background: transparent;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto; /* Căn giữa trong ô grid */
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-grid p {
+  margin: 8px 12px 4px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.movie-grid h3 {
+  margin: 0 12px 8px;
+  font-size: 1rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

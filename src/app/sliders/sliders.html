@@ -1,0 +1,13 @@
+<div class="slider-container" >
+    <div class="sliders">
+        @for(slide of sliders;let i = $index;track $index){
+        <img [src]="slide" alt="" [class.active]="i === currentIndex">
+     }
+    </div>
+
+</div>
+<div class="button">
+   <button (click)="next()">></button>
+   <button (click)="prev()"><</button>
+
+</div>

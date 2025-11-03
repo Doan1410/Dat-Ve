@@ -1,0 +1,30 @@
+<div class="slider-container" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+
+    <div class="slides-wrapper">
+        <div class="slides" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+            @for (banner of banners; track $index) {
+            <div class="slide">
+                <img [src]="banner.image" [alt]="'Banner ' + ($index + 1)" loading="lazy" />
+            </div>
+            }
+        </div>
+    </div>
+
+    <!-- NÚT MŨI TÊN TRÁI -->
+    <button class="nav-btn prev" (click)="prev()" aria-label="Previous slide">
+        <span class="arrow"></span>
+    </button>
+
+    <!-- NÚT MŨI TÊN PHẢI -->
+    <button class="nav-btn next" (click)="next()" aria-label="Next slide">
+        <span class="arrow"></span>
+    </button>
+
+    <!-- DOTS -->
+    <div class="dots">
+        @for (banner of banners; track $index) {
+        <span class="dot" [class.active]="currentIndex === $index" (click)="goToSlide($index)">
+        </span>
+        }
+    </div>
+</div>

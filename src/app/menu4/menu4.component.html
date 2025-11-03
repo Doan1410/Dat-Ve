@@ -1,0 +1,47 @@
+<div class="menu-container" [class.scrolled]="isScrolled">
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="https://chieuphimquocgia.com.vn/images/logo-text-new.svg" alt="Logo" class="logo-img" />
+    <div class="logo-text">
+      <span class="vi">TRUNG TÂM CHIẾU PHIM QUỐC GIA</span>
+      <span class="en">National Cinema Center</span>
+    </div>
+  </div>
+
+  <!-- Desktop Menu -->
+  <div class="desktop-menu">
+    <ul class="nav-links">
+      <li class="nav-link">Trang chủ</li>
+      <li class="nav-link">Lịch chiếu</li>
+      <li class="nav-link">Tin tức</li>
+      <li class="nav-link">Giới thiệu</li>
+    </ul>
+    <div class="auth-buttons">
+      <button class="btn-register">Đăng ký</button>
+      <button class="btn-login">Đăng nhập</button>
+    </div>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" (click)="toggleMenu()" [class.active]="isOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</div>
+
+<!-- Mobile Dropdown Menu -->
+<div class="mobile-dropdown" [class.open]="isOpen">
+  <ul class="mobile-nav">
+    <li class="nav-link" (click)="closeMenu()">Trang chủ</li>
+    <li class="nav-link" (click)="closeMenu()">Lịch chiếu</li>
+    <li class="nav-link" (click)="closeMenu()">Tin tức</li>
+    <li class="nav-link" (click)="closeMenu()">Giới thiệu</li>
+  </ul>
+  <div class="mobile-auth">
+    <button class="btn-register" (click)="closeMenu()">Đăng ký</button>
+    <button class="btn-login" (click)="closeMenu()">Đăng nhập</button>
+  </div>
+</div>
