@@ -1,36 +1,39 @@
-<app-menu4> </app-menu4>
-<app-banner-slider></app-banner-slider>
+<!-- <div smoothScroll> -->
+  <app-menu4> </app-menu4>
+  <app-banner-slider></app-banner-slider>
 
-<app-sliders></app-sliders>
-<div class="content">
-  <div class="movie-content">
-    <h1>Dang CHIẾU</h1>
-    <div class="movies">
 
-      @for(movie of movies; track movie.id) {@if(movie.state == 'đang chiếu') {
-      <app-movies-section [movie]="movie"> </app-movies-section>}
-      }
-      @empty {
-      <p>No movies available.</p>
-      }
+  <div class="content">
+    <div class="movie-content">
+      <h1 class="ncc_reveal ncc_up">Dang CHIẾU</h1>
+      <div class="movies">
+
+        @for(movie of movies; track movie.id) {@if(movie.state == 'đang chiếu') {
+        <app-movies-section class="ncc_reveal" [movie]="movie"> </app-movies-section>}
+        }
+        @empty {
+        <p>No movies available.</p>
+        }
+      </div>
+      <h1 class="ncc_reveal ncc_up">SẮP CHIẾU</h1>
+      <div class="movies">
+
+        @for(movie of movies; track movie.id) {@if(movie.state == 'sắp chiếu') {
+        <app-movies-section class="ncc_reveal" [movie]="movie"> </app-movies-section>}
+        }
+        @empty {
+        <p>No movies available.</p>
+        }
+      </div>
     </div>
-    <h1>SẮP CHIẾU</h1>
-    <div class="movies">
-
-      @for(movie of movies; track movie.id) {@if(movie.state == 'sắp chiếu') {
-      <app-movies-section [movie]="movie"> </app-movies-section>}
-      }
-      @empty {
-      <p>No movies available.</p>
-      }
+    <div class="new-content">
+      <h1>Dang CHIẾU</h1>
+      <div class="news-section">
+        @for(new of news; track new.title) {
+        <app-news-section [new]="new"> </app-news-section>
+        }
+      </div>
     </div>
   </div>
-  <div class="new-content">
-    <h1>Dang CHIẾU</h1>
-    <div class="news-section">
-      @for(new of news; track new.title) {
-      <app-news-section [new]="new"> </app-news-section>
-      }
-    </div>
-  </div>
-</div>
+  
+<!-- </div> -->
