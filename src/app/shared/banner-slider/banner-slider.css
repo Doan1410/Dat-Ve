@@ -1,0 +1,126 @@
+
+:host {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 70px); 
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: -70px; 
+}
+
+.slider-container {
+  position: relative;
+  width: 100vw !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  user-select: none;
+  max-width: none !important;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+
+.slides-wrapper,
+.slides,
+.slide {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+  object-position: center 25%;
+}
+
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: transparent;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-btn:hover .arrow {
+  border-color: #000;
+}
+
+.arrow {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: solid white;
+  border-width: 3px 0 0 3px;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease;
+}
+
+.prev .arrow {
+  transform: rotate(-45deg);
+  margin-right: 2px;
+}
+
+.next .arrow {
+  transform: rotate(135deg);
+  margin-left: 2px;
+}
+
+.nav-btn:hover .arrow {
+  width: 10px;
+  height: 10px;
+  border-width: 3.5px 0 0 3.5px;
+}
+
+.prev { left: 30px; }
+.next { right: 30px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .prev { left: 15px; }
+  .next { right: 15px; }
+}

@@ -1,6 +1,6 @@
 import { Component, OnDestroy ,OnInit, AfterViewInit} from '@angular/core';
 import { BANNERS } from '../db-data';
-import { Banner } from '../model/banner';
+import { Banner } from '../../model/banner';
 
 @Component({
   selector: 'app-banner-slider',

@@ -1,0 +1,28 @@
+.movie-detail {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 60px auto;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.movie-detail .poster img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.movie-detail .info {
+  flex: 1;
+}
+
+.movie-detail h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.movie-detail p {
+  font-size: 16px;
+  margin: 10px 0;
+}

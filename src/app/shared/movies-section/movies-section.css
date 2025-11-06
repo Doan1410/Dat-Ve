@@ -1,18 +1,18 @@
-/* movie.css */
+
 .app-movies-section {
-  /* Bỏ display: flex - vì cha là grid */
-  padding: 0; /* Không cần padding ở đây */
+
+  padding: 0; 
 }
 
 .movie-grid {
-  width: 100%; /* Quan trọng: chiếm hết ô grid */
+  width: 100%; 
   max-width: 230px;
   height: 400px;
   background: transparent;
   color: #fff;
   border-radius: 10px;
   overflow: hidden;
-  margin: 0 auto; /* Căn giữa trong ô grid */
+  margin: 0 auto; 
   display: flex;
   flex-direction: column;
 }

@@ -1,0 +1,17 @@
+<div class="date-buttons">
+  <button *ngFor="let d of dates" (click)="selectDate(d)" [class.active]="selectedDate === d">
+    {{ d }}
+  </button>
+</div>
+
+<div class="movies-list">
+  <div *ngFor="let movie of filteredMovies" class="movie-card">
+    <img [src]="movie.image" [alt]="movie.title" />
+    <div class="movie-info">
+      <h3>{{ movie.title }}</h3>
+      <p>Khởi chiếu: {{ movie.showtime[1] }}</p>
+    </div>
+  </div>
+
+  <p *ngIf="filteredMovies.length === 0">Không có phim trong ngày này.</p>
+</div>

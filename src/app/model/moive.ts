@@ -8,4 +8,6 @@ export interface Movie {
   description: string;
   actors: string;
   showtime: string[];
+  warning: string;
+  origin: string;
 }

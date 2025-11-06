@@ -1,19 +1,17 @@
 <div class="menu-container" [class.scrolled]="isScrolled">
 
-  <!-- Logo -->
   <div class="logo">
-    <img src="https://chieuphimquocgia.com.vn/images/logo-text-new.svg" alt="Logo" class="logo-img" />
+    <img src="https://chieuphimquocgia.com.vn/images/logo-text-new.svg" alt="Logo" class="logo-img"  routerLink="/"/>
     <div class="logo-text">
       <span class="vi">TRUNG TÂM CHIẾU PHIM QUỐC GIA</span>
       <span class="en">National Cinema Center</span>
     </div>
   </div>
 
-  <!-- Desktop Menu -->
   <div class="desktop-menu">
     <ul class="nav-links">
-      <li class="nav-link">Trang chủ</li>
-      <li class="nav-link">Lịch chiếu</li>
+      <li class="nav-link" routerLink="/">Trang chủ</li>
+      <li class="nav-link" routerLink="/movie-schedule">Lịch chiếu</li>
       <li class="nav-link">Tin tức</li>
       <li class="nav-link">Giới thiệu</li>
     </ul>
@@ -23,7 +21,6 @@
     </div>
   </div>
 
-  <!-- Hamburger Icon -->
   <div class="hamburger" (click)="toggleMenu()" [class.active]="isOpen">
     <span></span>
     <span></span>
@@ -32,7 +29,6 @@
 
 </div>
 
-<!-- Mobile Dropdown Menu -->
 <div class="mobile-dropdown" [class.open]="isOpen">
   <ul class="mobile-nav">
     <li class="nav-link" (click)="closeMenu()">Trang chủ</li>

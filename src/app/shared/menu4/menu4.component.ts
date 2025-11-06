@@ -1,9 +1,10 @@
 import { Component,HostListener ,ViewEncapsulation} from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-menu4',
-  imports: [],
+  imports: [RouterModule],
   standalone: true,
   templateUrl: './menu4.component.html',
   styleUrl: './menu4.component.css',

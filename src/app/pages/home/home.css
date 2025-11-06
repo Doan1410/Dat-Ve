@@ -1,0 +1,132 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:host {
+  display: block;
+  padding-top: 70px;
+  background: rgb(29, 29, 29);
+}
+
+.content {
+  padding-top: 0px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.movie-content {
+  flex: 3;
+  min-width: 300px;
+}
+
+.news-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 100%;
+}
+
+
+@media (max-width: 992px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .movies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .movies {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-grid {
+    max-width: 280px;
+    height: auto;
+    min-height: 420px;
+  }
+
+  .movie-image {
+    height: 320px;
+  }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body, html {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  height: 100%;                 
+  margin: 0;
+  
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}
+
+
+html {
+
+  scroll-padding-top: 0px;   
+}
+
+.ncc_reveal {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: all 0.7s ease;
+}
+
+.ncc_reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+app-movies-section {
+  display: block !important; 
+  margin: 0 !important;       
+  padding: 0 !important;
+}
+
+.ncc_up    { transition-delay: 0.1s; }
+.ncc_left  { transform: translateX(-80px); }
+.ncc_zoom  { transform: scale(0.8); }
+
+app-movies-section:nth-of-type(1) .ncc_reveal { transition-delay: 0.1s; }
+app-movies-section:nth-of-type(2) .ncc_reveal { transition-delay: 0.2s; }
+app-movies-section:nth-of-type(3) .ncc_reveal { transition-delay: 0.3s; }
+app-movies-section:nth-of-type(4) .ncc_reveal { transition-delay: 0.4s; }
+app-movies-section:nth-of-type(5) .ncc_reveal { transition-delay: 0.5s; }
+app-movies-section:nth-of-type(6) .ncc_reveal { transition-delay: 0.6s; }
+app-movies-section:nth-of-type(7) .ncc_reveal { transition-delay: 0.7s; }
+app-movies-section:nth-of-type(8) .ncc_reveal { transition-delay: 0.8s; }
+
+
+.ncc_reveal,
+.ncc_reveal * {
+  visibility: visible !important;
+}
