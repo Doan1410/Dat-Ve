@@ -7,7 +7,14 @@ export interface Movie {
   state: string;
   description: string;
   actors: string;
-  showtime: string[];
+  duration: string;      
+  director: string;
+  showtimes: Showtime[];
   warning: string;
   origin: string;
+}
+export interface Showtime {
+  id: number;
+  time: string;            
+  cinemaId: number;       
 }

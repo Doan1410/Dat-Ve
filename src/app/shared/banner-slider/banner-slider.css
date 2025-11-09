@@ -7,7 +7,8 @@
   padding: 0;
   position: relative;
   overflow: hidden;
-  margin-top: -70px; 
+  margin-top: 0px; 
+
 }
 
 .slider-container {
@@ -115,7 +116,7 @@
 .prev { left: 30px; }
 .next { right: 30px; }
 
-/* Mobile */
+
 @media (max-width: 768px) {
   .nav-btn {
     width: 44px;

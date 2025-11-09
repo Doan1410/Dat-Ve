@@ -7,18 +7,33 @@ export const BANNERS = [
   { image: 'https://chieuphimquocgia.com.vn/_next/image?url=http%3A%2F%2Fapiv2.chieuphimquocgia.com.vn%2FContent%2FImages%2FBanner%2F0019278.jpg&w=1920&q=75' }
 ];
 
+
+export const CINEMAS = [
+  { id: 1, name: 'Phòng chiếu số 10', rows: ['A','B','C','D','E','F','G','H','I'], cols: 14 },
+  { id: 2, name: 'Phòng chiếu số 8', rows: ['A','B','C','D','E','F','G'], cols: 12 }
+];
+
+
 export const MOVIES = [
   {
     id: 1,
     title: 'Mộ Đom Đóm',
-    date: '2025-11-07',           // ngày khởi chiếu
-    endDate: '2025-11-13',        // ngày kết thúc (dự kiến, có thể thay đổi)
+    date: '2025-11-07',
+    endDate: '2025-11-13',
     genre: 'Hoạt hình, Chiến tranh',
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Mộ Đom Đóm – K (Phụ đề)',
-    actors: '',
-    showtime: ['10:00', '11:40', '15:00', '18:20', '20:00'],
+    actors: 'Tsutomu Tatsumi, Ayano Shiraishi, Yoshiko Shinohara, Akemi Yamaguchi',
+    duration: '89 phút',
+    director: 'Isao Takahata',
+    showtimes: [
+      { id: 1, time: '10:00', cinemaId: 1 },
+      { id: 2, time: '11:40', cinemaId: 2 },
+      { id: 3, time: '15:00', cinemaId: 1 },
+      { id: 4, time: '18:20', cinemaId: 2 },
+      { id: 5, time: '20:00', cinemaId: 1 }
+    ],
     warning: 'K - Phim được phổ biến đến người xem dưới 13 tuổi trở lên và có người bảo hộ kèm',
     origin: 'Nhật Bản'
   },
@@ -31,10 +46,16 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Trái Tim Què Quặt – T18',
-    actors: '',
-    showtime: ['10:20', '16:00', '21:20'],
+    actors: 'Kawee Tanjararak, Ploy Sornarin, Witaya Wasukraipaisarn, Ratchanok Suwannaket',
+    duration: '98 phút',
+    director: 'Chalerm Wongpim',
+    showtimes: [
+      { id: 1, time: '10:20', cinemaId: 1 },
+      { id: 2, time: '16:00', cinemaId: 2 },
+      { id: 3, time: '21:20', cinemaId: 1 }
+    ],
     warning: 'T18 - Phim được phổ biến đến người xem từ đủ 18 tuổi trở lên (18+)',
-    origin: 'Việt Nam'
+    origin: 'Thái Lan'
   },
   {
     id: 3,
@@ -45,8 +66,16 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Quái Thú Vô Hình: Vùng Đất Chết Chóc – T16 (2D)',
-    actors: '',
-    showtime: ['10:15', '12:15', '16:15', '18:15', '22:05'],
+    actors: 'Milla Jovovich, Tony Jaa, Ron Perlman, Meagan Good, Diego Boneta',
+    duration: '95 phút',
+    director: 'Paul W.S. Anderson',
+    showtimes: [
+      { id: 1, time: '10:15', cinemaId: 1 },
+      { id: 2, time: '12:15', cinemaId: 2 },
+      { id: 3, time: '16:15', cinemaId: 1 },
+      { id: 4, time: '18:15', cinemaId: 2 },
+      { id: 5, time: '22:05', cinemaId: 1 }
+    ],
     warning: 'T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)',
     origin: 'Mỹ'
   },
@@ -59,8 +88,22 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Tình Người Duyên Ma: Nhắm Mak Yêu Luôn – T13 (Phụ đề)',
-    actors: '',
-    showtime: ['10:00', '11:55', '13:50', '15:45', '17:40', '18:35', '19:35', '20:30', '21:30', '22:25', '23:25'],
+    actors: 'Baifern Pimchanok, March Chutavuth, Nychaa Nuttanicha, Witthawat Rattanaboonbaramee',
+    duration: '118 phút',
+    director: 'Banjong Pisanthanakun',
+    showtimes: [
+      { id: 1, time: '10:00', cinemaId: 1 },
+      { id: 2, time: '11:55', cinemaId: 2 },
+      { id: 3, time: '13:50', cinemaId: 1 },
+      { id: 4, time: '15:45', cinemaId: 2 },
+      { id: 5, time: '17:40', cinemaId: 1 },
+      { id: 6, time: '18:35', cinemaId: 2 },
+      { id: 7, time: '19:35', cinemaId: 1 },
+      { id: 8, time: '20:30', cinemaId: 2 },
+      { id: 9, time: '21:30', cinemaId: 1 },
+      { id: 10, time: '22:25', cinemaId: 2 },
+      { id: 11, time: '23:25', cinemaId: 1 }
+    ],
     warning: 'T13 - Phim được phổ biến đến người xem từ đủ 13 tuổi trở lên (13+)',
     origin: 'Thái Lan'
   },
@@ -73,8 +116,15 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Thái Chiêu Tài – T18',
-    actors: '',
-    showtime: ['11:20', '15:15', '19:10', '23:05'],
+    actors: 'Rima Thanh Vy, Hoàng Phúc, Thúy Hạnh, Avin Lu, Kim Hải, Lâm Thanh Nhã',
+    duration: '102 phút',
+    director: 'Trần Hữu Tấn',
+    showtimes: [
+      { id: 1, time: '11:20', cinemaId: 1 },
+      { id: 2, time: '15:15', cinemaId: 2 },
+      { id: 3, time: '19:10', cinemaId: 1 },
+      { id: 4, time: '23:05', cinemaId: 2 }
+    ],
     warning: 'T18 - Phim được phổ biến đến người xem từ đủ 18 tuổi trở lên (18+)',
     origin: 'Việt Nam'
   },
@@ -87,8 +137,21 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Godzilla Minus One – T13',
-    actors: '',
-    showtime: ['09:30', '11:45', '14:00', '16:15', '18:30', '20:00', '20:45', '22:15', '22:55', '23:20'],
+    actors: 'Ryunosuke Kamiki, Minami Hamabe, Yuki Yamada, Sakura Ando, Kuranosuke Sasaki',
+    duration: '125 phút',
+    director: 'Takashi Yamazaki',
+    showtimes: [
+      { id: 1, time: '09:30', cinemaId: 1 },
+      { id: 2, time: '11:45', cinemaId: 2 },
+      { id: 3, time: '14:00', cinemaId: 1 },
+      { id: 4, time: '16:15', cinemaId: 2 },
+      { id: 5, time: '18:30', cinemaId: 1 },
+      { id: 6, time: '20:00', cinemaId: 2 },
+      { id: 7, time: '20:45', cinemaId: 1 },
+      { id: 8, time: '22:15', cinemaId: 2 },
+      { id: 9, time: '22:55', cinemaId: 1 },
+      { id: 10, time: '23:20', cinemaId: 2 }
+    ],
     warning: 'T13 - Phim được phổ biến đến người xem từ đủ 13 tuổi trở lên (13+)',
     origin: 'Nhật Bản'
   },
@@ -101,10 +164,16 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Lọ Lem Chơi Ngải – T18',
-    actors: '',
-    showtime: ['12:30', '17:50', '22:15'],
+    actors: 'Nadia Brian, Jirayu La-ongmanee, Thongpoom Siripipat, Ratchanok Suwannaket',
+    duration: '97 phút',
+    director: 'Poj Arnon',
+    showtimes: [
+      { id: 1, time: '12:30', cinemaId: 1 },
+      { id: 2, time: '17:50', cinemaId: 2 },
+      { id: 3, time: '22:15', cinemaId: 1 }
+    ],
     warning: 'T18 - Phim được phổ biến đến người xem từ đủ 18 tuổi trở lên (18+)',
-    origin: 'Indonesia'
+    origin: 'Thái Lan'
   },
   {
     id: 8,
@@ -115,10 +184,14 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Flow – P – LHP TÌNH YÊU',
-    actors: '',
-    showtime: ['19:30'],
+    actors: 'Không có diễn viên lồng tiếng nổi bật',
+    duration: '84 phút',
+    director: 'Gints Zilbalodis',
+    showtimes: [
+      { id: 1, time: '19:30', cinemaId: 1 }
+    ],
     warning: 'Phim phổ biến cho mọi độ tuổi',
-    origin: 'Bỉ'
+    origin: 'Latvia'
   },
   {
     id: 9,
@@ -129,8 +202,13 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Quái Thú Vô Hình: Vùng Đất Chết Chóc – T16 (3D)',
-    actors: '',
-    showtime: ['14:15', '20:15'],
+    actors: 'Milla Jovovich, Tony Jaa, Ron Perlman, Meagan Good, Diego Boneta',
+    duration: '95 phút',
+    director: 'Paul W.S. Anderson',
+    showtimes: [
+      { id: 1, time: '14:15', cinemaId: 1 },
+      { id: 2, time: '20:15', cinemaId: 2 }
+    ],
     warning: 'T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)',
     origin: 'Mỹ'
   },
@@ -143,8 +221,14 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Phá Đám Sinh Nhật Mẹ – T16',
-    actors: '',
-    showtime: ['13:20', '16:40', '21:40'],
+    actors: 'Trấn Thành, Hari Won, Ngô Kiến Huy, Khả Như, Lê Giang',
+    duration: '105 phút',
+    director: 'Trấn Thành',
+    showtimes: [
+      { id: 1, time: '13:20', cinemaId: 1 },
+      { id: 2, time: '16:40', cinemaId: 2 },
+      { id: 3, time: '21:40', cinemaId: 1 }
+    ],
     warning: 'T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)',
     origin: 'Việt Nam'
   },
@@ -157,8 +241,17 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Cái Má – T16',
-    actors: '',
-    showtime: ['09:20', '13:40', '17:55', '19:05', '21:10', '23:15'],
+    actors: 'Rima Thanh Vy, Hoàng Phúc, Thúy Hạnh, Avin Lu, Kim Hải, Lâm Thanh Nhã, Kiều Trinh, Hoàng Mèo, Kim Long',
+    duration: '115 phút',
+    director: 'Thắng Vũ',
+    showtimes: [
+      { id: 1, time: '09:20', cinemaId: 1 },
+      { id: 2, time: '13:40', cinemaId: 2 },
+      { id: 3, time: '17:55', cinemaId: 1 },
+      { id: 4, time: '19:05', cinemaId: 2 },
+      { id: 5, time: '21:10', cinemaId: 1 },
+      { id: 6, time: '23:15', cinemaId: 2 }
+    ],
     warning: 'T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)',
     origin: 'Việt Nam'
   },
@@ -171,8 +264,13 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Bí Mật Bất Nai – T18',
-    actors: '',
-    showtime: ['14:20', '19:40'],
+    actors: 'Lý Hải, Minh Hà, Mạc Văn Khoa, Hoàng Mèo, Lê Giang, Huỳnh Đông',
+    duration: '110 phút',
+    director: 'Lý Hải',
+    showtimes: [
+      { id: 1, time: '14:20', cinemaId: 1 },
+      { id: 2, time: '19:40', cinemaId: 2 }
+    ],
     warning: 'T18 - PHIM ĐƯỢC PHỔ BIẾN ĐẾN NGƯỜI XEM TỪ ĐỦ 18 TUỔI TRỞ LÊN (18+)',
     origin: 'Việt Nam'
   },
@@ -185,8 +283,14 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Tha Raẹ, Mục Sư, Thây Đóng Và Con Quỷ Ám Trì – T18',
-    actors: '',
-    showtime: ['13:15', '17:10', '21:05'],
+    actors: 'Mario Maurer, Davika Hoorne, Narilya Gulmongkolpech, Sahajak Boonthanakit',
+    duration: '108 phút',
+    director: 'Banjong Pisanthanakun',
+    showtimes: [
+      { id: 1, time: '13:15', cinemaId: 1 },
+      { id: 2, time: '17:10', cinemaId: 2 },
+      { id: 3, time: '21:05', cinemaId: 1 }
+    ],
     warning: 'Phim phổ biến đến người xem từ đủ 18 tuổi trở lên',
     origin: 'Thái Lan'
   },
@@ -199,8 +303,13 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Nhà Ma Xó – T16',
-    actors: '',
-    showtime: ['16:50', '23:10'],
+    actors: 'Trúc Anh, Khả Như, Lê Giang, Quang Tuấn, Huỳnh Đông',
+    duration: '98 phút',
+    director: 'Trần Hữu Tấn',
+    showtimes: [
+      { id: 1, time: '16:50', cinemaId: 1 },
+      { id: 2, time: '23:10', cinemaId: 2 }
+    ],
     warning: 'T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)',
     origin: 'Việt Nam'
   },
@@ -213,10 +322,14 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Điện Thoại Đen 2 – T18',
-    actors: '',
-    showtime: ['14:45'],
+    actors: 'Park Shin-hye, Jeon Jong-seo, Kim Sung-ryung, Lee El',
+    duration: '114 phút',
+    director: 'Lee Chung-hyun',
+    showtimes: [
+      { id: 1, time: '14:45', cinemaId: 1 }
+    ],
     warning: 'T18 - Phim được phổ biến đến người xem từ đủ 18 tuổi trở lên (18+)',
-    origin: 'Mỹ'
+    origin: 'Hàn Quốc'
   },
   {
     id: 16,
@@ -227,8 +340,15 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Cúc Vang Cửa Ngõai – T13',
-    actors: '',
-    showtime: ['12:35', '15:45', '20:00', '22:10'],
+    actors: 'Hồng Ánh, Lê Công Hoàng, Mai Cát Vi, Võ Điền Đan Thy',
+    duration: '100 phút',
+    director: 'Nguyễn Quang Dũng',
+    showtimes: [
+      { id: 1, time: '12:35', cinemaId: 1 },
+      { id: 2, time: '15:45', cinemaId: 2 },
+      { id: 3, time: '20:00', cinemaId: 1 },
+      { id: 4, time: '22:10', cinemaId: 2 }
+    ],
     warning: 'T13 - Phim được phổ biến đến người xem từ đủ 13 tuổi trở lên (13+)',
     origin: 'Việt Nam'
   },
@@ -241,8 +361,12 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Quỷ Ăn Tạng 3 – T16',
-    actors: '',
-    showtime: ['21:45'],
+    actors: 'Chantavit Dhanasevi, Nittha Jirayungyurn, Thongpoom Siripipat, Ratchanok Suwannaket',
+    duration: '96 phút',
+    director: 'Poj Arnon',
+    showtimes: [
+      { id: 1, time: '21:45', cinemaId: 1 }
+    ],
     warning: 'T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)',
     origin: 'Thái Lan'
   },
@@ -252,11 +376,15 @@ export const MOVIES = [
     date: '2025-10-03',
     endDate: '2025-11-13',
     genre: 'Hoạt hình',
-    image: 'https://chieuphimquoc.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
+    image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Cậu Bé Cá Heo & Bí Mật 7 Đại Dương – P (Lồng tiếng)',
-    actors: '',
-    showtime: ['20:00'],
+    actors: 'Lồng tiếng: Nguyễn Kim Luân, Võ Hạ Trâm, BB Trần, Trấn Thành',
+    duration: '85 phút',
+    director: 'Mohamed Kamel',
+    showtimes: [
+      { id: 1, time: '20:00', cinemaId: 1 }
+    ],
     warning: 'P - PHIM ĐƯỢC PHÉP PHỔ BIẾN ĐẾN NGƯỜI XEM Ở MỌI ĐỘ TUỔI',
     origin: 'United Arab Emirates'
   },
@@ -269,12 +397,20 @@ export const MOVIES = [
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
     state: 'đang chiếu',
     description: 'Tử Chiến Trên Không – T16',
-    actors: '',
-    showtime: ['12:10', '14:20', '16:30', '19:00', '21:10'],
+    actors: 'Lý Liên Kiệt, Chân Tử Đan, Cổ Thiên Lạc, Trương Hàm Dư',
+    duration: '120 phút',
+    director: 'Lý Nhân Cảng',
+    showtimes: [
+      { id: 1, time: '12:10', cinemaId: 1 },
+      { id: 2, time: '14:20', cinemaId: 2 },
+      { id: 3, time: '16:30', cinemaId: 1 },
+      { id: 4, time: '19:00', cinemaId: 2 },
+      { id: 5, time: '21:10', cinemaId: 1 }
+    ],
     warning: 'T16 - Phim được phổ biến đến người xem từ đủ 16 tuổi trở lên (16+)',
-    origin: 'Việt Nam'
+    origin: 'Trung Quốc'
   },
-  // === SẮP CHIẾU ===
+  // === PHIM SẮP CHIẾU (giữ trống actors, duration, director) ===
   {
     id: 20,
     title: 'Không Bóng Tuyết Nào Trong Sách',
@@ -285,7 +421,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Không Bóng Tuyết Nào Trong Sách – Phim tâm lý tình cảm',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Việt Nam'
   },
@@ -299,7 +437,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Bảy Tiên – Phim tâm lý tình cảm',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Việt Nam'
   },
@@ -313,7 +453,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Wicked: Phần 2 – Phim ca nhạc',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Mỹ'
   },
@@ -327,7 +469,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Cưới Vợ Cho Cha – Phim hài tình cảm gia đình',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Việt Nam'
   },
@@ -341,7 +485,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Phong Trọ Ma Bấu – Phim tâm lý tình cảm',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Việt Nam'
   },
@@ -355,7 +501,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Hoàng Tử Quỷ – Phim kinh dị',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Việt Nam'
   },
@@ -369,7 +517,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Năm Bém Kinh Hoàng 2 – Phim kinh dị',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Mỹ'
   },
@@ -383,7 +533,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Nhà Hai Chủ – Phim kinh dị',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Việt Nam'
   },
@@ -397,7 +549,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'G-Dragon in Cinema [Übermensch] – Phim ca nhạc',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Hàn Quốc'
   },
@@ -411,7 +565,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Oán Hồn Trong Vali – Phim kinh dị',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Thái Lan'
   },
@@ -425,7 +581,9 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Trốn Chạy Tử Thần – Phim hành động',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Mỹ'
   },
@@ -439,12 +597,13 @@ export const MOVIES = [
     state: 'sắp chiếu',
     description: 'Truy Tìm Long Điền Hương – Phim hài',
     actors: '',
-    showtime: [],
+    duration: '',
+    director: '',
+    showtimes: [],
     warning: '',
     origin: 'Việt Nam'
   }
 ];
-
 export const NEWS = [
   {
     title: 'Tuần Lễ Phim Châu Âu 2025',

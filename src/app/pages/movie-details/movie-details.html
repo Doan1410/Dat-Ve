@@ -1,11 +1,44 @@
-<div class="movie-detail" *ngIf="movie">
-  <div class="poster">
-    <img [src]="movie.image" alt="{{ movie.title }}">
+<div class="movie-detail" *ngIf="movie" [style.background-image]="'url(' + movie.image + ')'">
+  <div class="details">
+    <div class="poster">
+      <img [src]="movie.image" alt="{{ movie.title }}">
+    </div>
+    <div class="info">
+      <h1>{{ movie.title }}</h1>
+      <div class="sub-info">
+        <p> {{ movie.genre }}</p>
+        <p> {{ movie.origin }}</p>
+        <p> {{ movie.duration }}</p>
+        <p> {{ movie.director }}</p>
+      </div>
+      <p><strong>Diễn viên:</strong> {{ movie.actors }}</p>
+      <p><strong>Khởi chiếu:</strong> {{ movie.date }}</p>
+      <br />
+      <p><strong></strong> {{ movie.description }}</p>
+
+    </div>
   </div>
-  <div class="info">
-    <h1>{{ movie.title }}</h1>
-    <p><strong>Thể loại:</strong> {{ movie.genre }}</p>
-    <p><strong>Ngày chiếu:</strong> {{ movie.date }}</p>
-    <p><strong>Mô tả:</strong> {{ movie.description }}</p>
+</div>
+
+<div class="showtimes">
+  <h3>Giờ chiếu</h3>
+  <div class="showtime-buttons">
+    <button *ngFor="let s of movie.showtimes" (click)="selectShowtime(s)"
+      [class.active]="selectedShowtime?.id === s.id">
+      {{ s.time }}
+    </button>
+  </div>
+</div>
+
+
+<div *ngIf="selectedShowtime" class="seat-map">
+  <h3>{{ selectedCinema?.name }}</h3>
+
+  <div class="seat-grid">
+    <div *ngFor="let row of seatMap" class="seat-row">
+      <button *ngFor="let seat of row" [ngClass]="seat.type" [disabled]="seat.status === 'booked'">
+        {{ seat.row }}{{ seat.number }}
+      </button>
+    </div>
   </div>
 </div>
