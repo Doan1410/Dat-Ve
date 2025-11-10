@@ -178,7 +178,7 @@ export const MOVIES = [
   {
     id: 8,
     title: 'Flow',
-    date: '2025-11-07',
+    date: '2025-10-07',
     endDate: '2025-11-13',
     genre: 'Hoạt hình, Lạc Trôi',
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',
@@ -196,7 +196,7 @@ export const MOVIES = [
   {
     id: 9,
     title: 'Quái Thú Vô Hình: Vùng Đất Chết Chóc (3D)',
-    date: '2025-11-07',
+    date: '2025-10-07',
     endDate: '2025-11-20',
     genre: 'Hành động, Kinh dị',
     image: 'https://chieuphimquocgia.com.vn/_next/image?url=https%3A%2F%2Fapi.chieuphimquocgia.com.vn%2FContent%2FImages%2F0018944_0.jpg&w=256&q=75',

@@ -15,7 +15,6 @@ export class MoviesSection {
 
   constructor(private router: Router) {}
   goToDetail() {
-    // Điều hướng sang /movie/:id
     this.router.navigate(['/movie', this.movie.id]);
   }
 }

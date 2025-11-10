@@ -4,12 +4,12 @@
   </button>
 </div>
 
-<div class="movies-list">
-  <div *ngFor="let movie of filteredMovies" class="movie-card">
+<div class="movies-list" >
+  <div *ngFor="let movie of filteredMovies" class="movie-card" (click)="goToDetail(movie)" >
     <img [src]="movie.image" [alt]="movie.title" />
     <div class="movie-info">
       <h3>{{ movie.title }}</h3>
-      <p>Khởi chiếu: {{ movie.showtime[1] }}</p>
+      <!-- <p>Khởi chiếu: {{ movie.showtime[1] }}</p> -->
     </div>
   </div>
 

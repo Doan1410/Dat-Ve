@@ -77,6 +77,7 @@
   margin-bottom: 8px;
   font-size: 15px;
   color: #ddd;
+  align-items: center;
 }
 
 .movie-detail .sub-info p {
@@ -85,29 +86,14 @@
   font-weight: 500;
 }
 
-.movie-detail .sub-info p::before {
-  content: '• ';
-  color: #ffcc00;
-  font-weight: bold;
-}
 
-.movie-detail p {
-  font-size: 15.5px;
-  margin: 12px 0;
-  line-height: 1.7;
-  color: #ccc;
-}
 
-.movie-detail p strong {
-  color: #ffcc00;
-  font-weight: 600;
-}
-
+/* 
 .movie-detail p:nth-of-type(1) {
   font-style: italic;
   color: #e0e0e0;
   line-height: 1.8;
-}
+} */
 
 .movie-detail p:nth-of-type(2) {
   font-size: 14.5px;
@@ -129,7 +115,7 @@
 
 .showtimes h3 {
   font-size: 22px;
-  color: #ffcc00;
+  color: #fffcf1;
   margin-bottom: 16px;
   font-weight: 600;
 }

@@ -1,6 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,Input,OnInit } from '@angular/core';
 import { MOVIES } from '../../shared/db-data';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { Movie } from '../../model/moive';
 
 @Component({
   selector: 'app-movie-schedule',
@@ -60,4 +62,12 @@ export class MovieSchedule implements OnInit {
     const today = new Date().toISOString().split('T')[0];
     return dateStr === today ? `Hôm nay` : `${weekday}, ${day}/${month}`;
   }
+
+
+
+  constructor(private router: Router) {}
+  goToDetail(movie: any) {
+  this.router.navigate(['/movie', movie.id]);
+}
+
 }
